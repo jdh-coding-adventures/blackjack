@@ -23,34 +23,6 @@ class Decks:
 
         return deck
 
-    # def shuffle_deck(self):
-    #     return random.shuffle(self)
-
-
-def draw_card(deck):
-    return deck.pop(0)
-
-
-def get_score(hand: list):
-    """
-    TODO: change function to only add total from last card added.
-    This means the main program will also need to be updated.
-    """
-
-    total = 0
-    for card in hand:
-        val = card.split("-")[0]
-        if val.isnumeric():
-            total += int(val)
-        elif val.lower() in ["king", "queen", "jack"]:
-            total += 10
-        elif val.lower() == "ace":
-            if total < 11:
-                total += 11
-            else:
-                total += 1
-    return total
-
 
 class Player:
     def __init__(self, name, type):
